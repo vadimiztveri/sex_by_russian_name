@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Определение пола по имени, фамилии и отчеству</title>
+    <meta http-equiv="Content-Language" content="ru">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <style>
+      html{font-family: sans-serif;color: #555555;}
+      input{font-size: 200%;}
+      #result{background: #eee;}
+    </style>
+  </head>
+  <body>
+    <h1>Определение пола по имени, фамилии и отчеству</h1>
+    <forms>
+      <table>
+        <tr>
+          <td><labal for="surname">Фамилия</labal></td>
+          <td><input id="surname" type="text" onBlur="sexing()" /></td>
+        </tr>
+
+        <tr>
+          <td><labal for="first_name">Имя</labal></td>
+          <td><input id="first_name" type="text" onBlur="sexing()" /></td>
+        </tr>
+
+        <tr>
+          <td><labal for="patronymic">Отчество</labal></td>
+          <td><input id="patronymic" type="text" onBlur="sexing()" /></td>
+        </tr>
+
+
+        <tr>
+          <td><labal for="result">Пол:</labal></td>
+          <td><input id="result" type="text" /></td>
+          <td></td>
+        </tr>
+      </table>
+    </forms>
+
+    <script src="Sex.js"></script>
+
+    <script>
+      var sexing = function () {
+        var surname = document.getElementById('surname').value,
+            first_name = document.getElementById('first_name').value,
+            patronymic = document.getElementById('patronymic').value,
+
+            sex = new Sex(surname, first_name, patronymic),
+            gender = sex.get_gender();
+
+        switch(gender){
+          case 0:
+            var subject = "женский";
+            break;
+          case 1:
+            var subject = "мужской";
+            break;
+          default:
+            var subject = "не определен";
+        }
+
+        document.getElementById('result').value = subject;
+      }
+
+    </script>
+
+  </body>
+</html>
