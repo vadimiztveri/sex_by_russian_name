@@ -39,7 +39,7 @@
       </table>
     </forms>
 
-    <script src="Sex.js"></script>
+    <script src="SexByRussianName.js"></script>
 
     <script>
       var sexing = function () {
@@ -47,8 +47,8 @@
             first_name = document.getElementById('first_name').value,
             patronymic = document.getElementById('patronymic').value,
 
-            sex = new Sex(surname, first_name, patronymic),
-            gender = sex.get_gender();
+            sex_by_russian_name = new SexByRussianName(surname, first_name, patronymic),
+            gender = sex_by_russian_name.get_gender();
 
         switch(gender){
           case 0:
