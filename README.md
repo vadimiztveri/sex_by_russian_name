@@ -11,74 +11,45 @@ Javascript-библиотека для определения пола по фа
 <script src="sex_by_russian_name.js"></script>
 ```
 
-### Инициализация
-```js
-new SexByRussianName("Иванов", "Иван", "Иванович")
-```
-
-Например:
-
-```js
-var sex_by_russian_name = new SexByRussianName("Иванов", "Иван", "Иванович");
-```
-
 
 ### Получение результата
-
-```js
-new SexByRussianName("Иванов", "Иван", "Иванович").get_gender()
-```
-
-Например:
 
 ```js
 var sex_by_russian_name = new SexByRussianName("Иванов", "Иван", "Иванович");
 sex_by_russian_name.get_gender(); // 1 — мужской, 0 — женский, undefined — не определен.
 ```
 
-Пример
-------
+Как добавить скрипт в код
+-------------------------
 
 ```html
-<!-- HTML формы -->
+<form>
+  <p>
+    <label for="surname">Фамилия:</label><br/>
+    <input id="surname" type="text" onBlur="sexing()" />
+  </p>
 
-<forms>
-  <table>
-    <tr>
-      <td><label for="surname">Фамилия:</labal></td>
-      <td><input id="surname" type="text" onBlur="sexing()" /></td>
-    </tr>
+  <p>
+    <label for="first_name">Имя:</label><br/>
+    <input id="first_name" type="text" onBlur="sexing()" />
+  </p>
 
-    <tr>
-      <td><label for="first_name">Имя:</labal></td>
-      <td><input id="first_name" type="text" onBlur="sexing()" /></td>
-    </tr>
+  <p>
+    <label for="patronymic">Отчество:</label><br/>
+    <input id="patronymic" type="text" onBlur="sexing()" />
+  </p>
 
-    <tr>
-      <td><label for="patronymic">Отчество:</labal></td>
-      <td><input id="patronymic" type="text" onBlur="sexing()" /></td>
-    </tr>
-
-    <tr>
-      <td><label for="result">Пол:</labal></td>
-      <td><input id="male" name="sex" type="radio" onclick="manual_sex_choice()" /> мужской <input id="female" name="sex" type="radio" onclick="manual_sex_choice()" /> женский</td>
-      <td></td>
-    </tr>
-  </table>
-</forms>
-```
-
-```html
-<!-- Инициализация скрипта -->
+  <p>
+    <label for="result">Пол:</label><br/>
+    <input id="male" name="sex" type="radio" onclick="manual_sex_choice()" /> мужской
+    <input id="female" name="sex" type="radio" onclick="manual_sex_choice()" /> женский
+</form>
 
 <script src="sex_by_russian_name.js"></script>
 ```
 
+
 ```js
-// Скрипт, который получает из формы данные и передает классу SexByRussianName для определения.
-
-// Результат отображается radio-кнопках.
-
 var is_manual_sex_choice = false;
 
 var manual_sex_choice = function() {

@@ -13,30 +13,30 @@
   </head>
   <body>
     <h1>Определение пола по имени, фамилии и отчеству</h1>
-    <forms>
+    <form>
       <table>
         <tr>
-          <td><label for="surname">Фамилия:</labal></td>
+          <td><label for="surname">Фамилия:</label></td>
           <td><input id="surname" type="text" onBlur="sexing()" /></td>
         </tr>
 
         <tr>
-          <td><label for="first_name">Имя:</labal></td>
+          <td><label for="first_name">Имя:</label></td>
           <td><input id="first_name" type="text" onBlur="sexing()" /></td>
         </tr>
 
         <tr>
-          <td><label for="patronymic">Отчество:</labal></td>
+          <td><label for="patronymic">Отчество:</label></td>
           <td><input id="patronymic" type="text" onBlur="sexing()" /></td>
         </tr>
 
         <tr>
-          <td><label for="result">Пол:</labal></td>
+          <td><label for="result">Пол:</label></td>
           <td><input id="male" name="sex" type="radio" onclick="manual_sex_choice()" /> мужской <input id="female" name="sex" type="radio" onclick="manual_sex_choice()" /> женский</td>
           <td></td>
         </tr>
       </table>
-    </forms>
+    </form>
 
     <script src="sex_by_russian_name.js"></script>
 
