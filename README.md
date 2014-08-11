@@ -9,7 +9,7 @@ Javascript-библиотека для определения пола по фа
 
 ```html
 <script src="sex_by_russian_name.js"></script>
-```html
+```
 
 ### Инициализация
 `new SexByRussianName("Иванов", "Иван", "Иванович")`
@@ -18,21 +18,21 @@ Javascript-библиотека для определения пола по фа
 
 ```js
 var sex_by_russian_name = new SexByRussianName("Иванов", "Иван", "Иванович");
-```js
+```
 
 
 ### Получение результата
 
 ```js
 new SexByRussianName("Иванов", "Иван", "Иванович").get_gender()
-```js
+```
 
 Например:
 
 ```js
 var sex_by_russian_name = new SexByRussianName("Иванов", "Иван", "Иванович");
 sex_by_russian_name.get_gender(); // 1 - мужской, 0 - женский, undefined - не определен.
-```js
+```
 
 
 Как это работает
