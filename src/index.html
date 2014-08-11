@@ -32,13 +32,13 @@
 
         <tr>
           <td><label for="result">Пол:</labal></td>
-          <td><input id="result" type="text" /></td>
+          <td><input id="male" name="sex" type="radio" /> мужской <input id="female" name="sex" type="radio" /> женский</td>
           <td></td>
         </tr>
       </table>
     </forms>
 
-    <script src="SexByRussianName.js"></script>
+    <script src="sex_by_russian_name.js"></script>
 
     <script>
       var sexing = function () {
@@ -50,16 +50,15 @@
 
         switch(gender){
           case 0:
-            var subject = "женский";
+            document.getElementById('female').checked = true;
             break;
           case 1:
-            var subject = "мужской";
+            document.getElementById('male').checked = true;
             break;
           default:
-            var subject = "не определен";
+            document.getElementById('male').checked = false;
+            document.getElementById('female').checked = false;
         }
-
-        document.getElementById('result').value = subject;
       }
 
     </script>
