@@ -14,28 +14,26 @@
   <body>
     <h1>Определение пола по имени, фамилии и отчеству</h1>
     <form>
-      <table>
-        <tr>
-          <td><label for="surname">Фамилия:</label></td>
-          <td><input id="surname" type="text" onBlur="sexing()" /></td>
-        </tr>
+      <p>
+        <label for="surname">Фамилия:</label><br/>
+        <input id="surname" type="text" onBlur="sexing()" />
+      </p>
 
-        <tr>
-          <td><label for="first_name">Имя:</label></td>
-          <td><input id="first_name" type="text" onBlur="sexing()" /></td>
-        </tr>
+      <p>
+        <label for="first_name">Имя:</label><br/>
+        <input id="first_name" type="text" onBlur="sexing()" />
+      </p>
 
-        <tr>
-          <td><label for="patronymic">Отчество:</label></td>
-          <td><input id="patronymic" type="text" onBlur="sexing()" /></td>
-        </tr>
+      <p>
+        <label for="patronymic">Отчество:</label><br/>
+        <input id="patronymic" type="text" onBlur="sexing()" />
+      </p>
 
-        <tr>
-          <td><label for="result">Пол:</label></td>
-          <td><input id="male" name="sex" type="radio" onclick="manual_sex_choice()" /> мужской <input id="female" name="sex" type="radio" onclick="manual_sex_choice()" /> женский</td>
-          <td></td>
-        </tr>
-      </table>
+      <p>
+        <label for="result">Пол:</label><br/>
+        <input id="male" name="sex" type="radio" onclick="manual_sex_choice()" /> мужской
+        <input id="female" name="sex" type="radio" onclick="manual_sex_choice()" /> женский
+      <p>
     </form>
 
     <script src="sex_by_russian_name.js"></script>

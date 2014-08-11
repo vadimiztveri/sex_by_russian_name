@@ -43,6 +43,7 @@ sex_by_russian_name.get_gender(); // 1 — мужской, 0 — женский,
     <label for="result">Пол:</label><br/>
     <input id="male" name="sex" type="radio" onclick="manual_sex_choice()" /> мужской
     <input id="female" name="sex" type="radio" onclick="manual_sex_choice()" /> женский
+  <p>
 </form>
 
 <script src="sex_by_russian_name.js"></script>
