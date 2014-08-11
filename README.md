@@ -3,51 +3,36 @@ Javascript-библиотека для определения пола по фа
 
 [Демо](http://vadimiztveri.github.io/)
 
-JavaScript код, который по традиционным русским Имени, Фамилии и Отчеству определяет пол.
 
 ### Установка
 Подключите к вашему приложению скрипт, например:
 
-`<script src="SexByRussianName.js"></script>`
+```html
+<script src="sex_by_russian_name.js"></script>
+```html
 
 ### Инициализация
 `new SexByRussianName("Иванов", "Иван", "Иванович")`
 
 Например:
 
-`var sex_by_russian_name = new SexByRussianName("Иванов", "Иван", "Иванович");`
+```js
+var sex_by_russian_name = new SexByRussianName("Иванов", "Иван", "Иванович");
+```js
+
 
 ### Получение результата
 
-`new SexByRussianName("Иванов", "Иван", "Иванович").get_gender()`
+```js
+new SexByRussianName("Иванов", "Иван", "Иванович").get_gender()
+```js
 
 Например:
 
-```
+```js
 var sex_by_russian_name = new SexByRussianName("Иванов", "Иван", "Иванович");
-sex_by_russian_name.get_gender();
-```
-
-### Формат ввода
-
-Скрипт получает аргументы в формате строк (string):
-
-1. фамилия.
-2. имя.
-3. отчество.
-
-Если нет какой-то из частей имени, то просто передайте пустую строку (""). Например:
-
-`var sex_by_russian_name = new SexByRussianName("Иванов", "", "");`
-
-
-### Формат вывода
-
-Метод *.get_gender* возвращает один из трех вариантов:
-
-* *1* (мужской пол),
-* *0* (женский пол),
-* *undefined* (не удалось определить пол).
+sex_by_russian_name.get_gender(); // 1 - мужской, 0 - женский, undefined - не определен.
+```js
 
 
 Как это работает
@@ -55,21 +40,23 @@ sex_by_russian_name.get_gender();
 
 Скрипт сначала определяет пол у каждой части имени отдельно, а потом, исходя из полученных данных, возвращает результат.
 
-[Подробнее о способах определения пола по частям имени в вики.](https://github.com/vadimiztveri/sex_by_russian_name/wiki/Определение-пола-по-частям-имени)
+[О способах определения пола по частям имени.](https://github.com/vadimiztveri/sex_by_russian_name/wiki/Определение-пола-по-частям-имени)
 
-[Подробнее о логике определения пола в вики.](https://github.com/vadimiztveri/sex_by_russian_name/wiki/Логика-отпределения-пола)
+[О логике определения пола.](https://github.com/vadimiztveri/sex_by_russian_name/wiki/Логика-отпределения-пола)
 
 
 Лицензия
 --------
 
-sexing_by_russian_name является бесплатным ПО, подробности в файле LICENSE.
+sex_by_russian_name является бесплатным ПО, подробности в файле LICENSE.
 
 
 Авторы
 ------
 
-Скрипт написан в студии «[Цифрономика](http://cifronomika.ru/)». Авторы:
+Скрипт поддерживается «[Цифрономикой](http://cifronomika.ru/)».
+
+Авторы:
 * [Вадим Галкин](https://github.com/vadimiztveri/)
 * [Александр Борисов](https://github.com/aishek)
 * [Кирилл Храпков](https://github.com/cubbiu)
