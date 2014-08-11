@@ -55,10 +55,10 @@ sex_by_russian_name.get_gender();
 
 Скрипт сначала определяет пол у каждой части имени отдельно, а потом, исходя из полученных данных, возвращает результат.
 
+[Поробнее о способах определения пола по частям имени в вики.](https://github.com/vadimiztveri/sex_by_russian_name/wiki/Определение-пола-по-частям-имени)
+
 [Поробнее о логике определения пола в вики.](https://github.com/vadimiztveri/sex_by_russian_name/wiki/Логика-отпределения-пола)
 
-
-[Поробнее о способах определения пола по частям имени в вики.](https://github.com/vadimiztveri/sex_by_russian_name/wiki/Определение-пола-по-частям-имени)
 
 Лицензия
 --------
@@ -66,8 +66,8 @@ sex_by_russian_name.get_gender();
 sexing_by_russian_name является бесплатным ПО, подробности в файле LICENSE.
 
 
-Благодарность
--------------
+Авторы
+------
 
 Скрипт написан в студии «[Цифрономика](http://cifronomika.ru/)». Авторы:
 * [Вадим Галкин](https://github.com/vadimiztveri/)

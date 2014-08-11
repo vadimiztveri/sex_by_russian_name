@@ -4,7 +4,7 @@ beforeEach(function () {
       return {
         compare:  function (actual) {
           return {
-            pass: actual === Sex.MALE
+            pass: actual === SexByRussianName.MALE
           }
         }
       };
@@ -13,7 +13,7 @@ beforeEach(function () {
       return {
         compare:  function (actual) {
           return {
-            pass: actual === Sex.FEMALE
+            pass: actual === SexByRussianName.FEMALE
           }
         }
       };
