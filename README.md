@@ -33,7 +33,7 @@ new SexByRussianName("Иванов", "Иван", "Иванович").get_gender(
 
 ```js
 var sex_by_russian_name = new SexByRussianName("Иванов", "Иван", "Иванович");
-sex_by_russian_name.get_gender(); // 1 - мужской, 0 - женский, undefined - не определен.
+sex_by_russian_name.get_gender(); // 1 — мужской, 0 — женский, undefined — не определен.
 ```
 
 

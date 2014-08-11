@@ -32,7 +32,7 @@
 
         <tr>
           <td><label for="result">Пол:</labal></td>
-          <td><input id="male" name="sex" type="radio" /> мужской <input id="female" name="sex" type="radio" /> женский</td>
+          <td><input id="male" name="sex" type="radio" onclick="manual_sex_choice()" /> мужской <input id="female" name="sex" type="radio" onclick="manual_sex_choice()" /> женский</td>
           <td></td>
         </tr>
       </table>
@@ -41,23 +41,31 @@
     <script src="sex_by_russian_name.js"></script>
 
     <script>
-      var sexing = function () {
-        var surname = document.getElementById('surname').value,
-            first_name = document.getElementById('first_name').value,
-            patronymic = document.getElementById('patronymic').value,
-            sex_by_russian_name = new SexByRussianName(surname, first_name, patronymic),
-            gender = sex_by_russian_name.get_gender();
+      var is_manual_sex_choice = false;
 
-        switch(gender){
-          case 0:
-            document.getElementById('female').checked = true;
-            break;
-          case 1:
-            document.getElementById('male').checked = true;
-            break;
-          default:
-            document.getElementById('male').checked = false;
-            document.getElementById('female').checked = false;
+      var manual_sex_choice = function() {
+        is_manual_sex_choice = true;
+      }
+
+      var sexing = function () {
+        if (!is_manual_sex_choice) {
+          var surname = document.getElementById('surname').value,
+              first_name = document.getElementById('first_name').value,
+              patronymic = document.getElementById('patronymic').value,
+              sex_by_russian_name = new SexByRussianName(surname, first_name, patronymic),
+              gender = sex_by_russian_name.get_gender();
+
+          switch(gender){
+            case 0:
+              document.getElementById('female').checked = true;
+              break;
+            case 1:
+              document.getElementById('male').checked = true;
+              break;
+            default:
+              document.getElementById('male').checked = false;
+              document.getElementById('female').checked = false;
+          }
         }
       }
 
