@@ -4,26 +4,23 @@ Javascript-библиотека для определения пола по фа
 [Демо](http://vadimiztveri.github.io/)
 
 
-Установка
----------
+Пример
+------
 
-Подключите к вашему приложению скрипт:
+Подключите скрипт:
 
 ```html
 <script src="sex_by_russian_name.js"></script>
 ```
 
-
-Получение результата
---------------------
+Пример инициализации и получения результата:
 
 ```js
 var sex_by_russian_name = new SexByRussianName("Иванов", "Иван", "Иванович");
 sex_by_russian_name.get_gender(); // 1 — мужской, 0 — женский, undefined — не определен.
 ```
 
-Как добавить скрипт в код
--------------------------
+Пример скрипта в HTML:
 
 ```html
 <form>
@@ -50,37 +47,36 @@ sex_by_russian_name.get_gender(); // 1 — мужской, 0 — женский,
 </form>
 
 <script src="sex_by_russian_name.js"></script>
-```
 
+<script>
+  var is_manual_sex_choice = false;
 
-```js
-var is_manual_sex_choice = false;
+  var manual_sex_choice = function() {
+    is_manual_sex_choice = true;
+  }
 
-var manual_sex_choice = function() {
-  is_manual_sex_choice = true;
-}
+  var sexing = function () {
+    if (!is_manual_sex_choice) {
+      var surname = document.getElementById('surname').value,
+          first_name = document.getElementById('first_name').value,
+          patronymic = document.getElementById('patronymic').value,
+          sex_by_russian_name = new SexByRussianName(surname, first_name, patronymic),
+          gender = sex_by_russian_name.get_gender();
 
-var sexing = function () {
-  if (!is_manual_sex_choice) {
-    var surname = document.getElementById('surname').value,
-        first_name = document.getElementById('first_name').value,
-        patronymic = document.getElementById('patronymic').value,
-        sex_by_russian_name = new SexByRussianName(surname, first_name, patronymic),
-        gender = sex_by_russian_name.get_gender();
-
-    switch(gender){
-      case 0:
-        document.getElementById('female').checked = true;
-        break;
-      case 1:
-        document.getElementById('male').checked = true;
-        break;
-      default:
-        document.getElementById('male').checked = false;
-        document.getElementById('female').checked = false;
+      switch(gender){
+        case 0:
+          document.getElementById('female').checked = true;
+          break;
+        case 1:
+          document.getElementById('male').checked = true;
+          break;
+        default:
+          document.getElementById('male').checked = false;
+          document.getElementById('female').checked = false;
+      }
     }
   }
-}
+</script>
 ```
 
 Как это работает
@@ -88,9 +84,9 @@ var sexing = function () {
 
 Скрипт сначала определяет пол у каждой части имени отдельно, а потом, исходя из полученных данных, возвращает результат.
 
-[О способах определения пола в каждой части имени.](https://github.com/vadimiztveri/sex_by_russian_name/wiki/Определение-пола-по-частям-имени)
+[О способах определения пола в каждой части имени](https://github.com/vadimiztveri/sex_by_russian_name/wiki/Определение-пола-по-частям-имени)
 
-[О логике итогового определения пола, после получения результатов из частей имени.](https://github.com/vadimiztveri/sex_by_russian_name/wiki/Логика-отпределения-пола)
+[О логике итогового определения пола, после получения результатов из частей имени](https://github.com/vadimiztveri/sex_by_russian_name/wiki/Логика-отпределения-пола)
 
 
 Лицензия
@@ -102,7 +98,7 @@ sex_by_russian_name является бесплатным ПО, подробно
 Авторы
 ------
 
-Скрипт поддерживается «[Цифрономикой](http://cifronomika.ru/)».
+Скрипт поддерживается [Цифрономикой](http://cifronomika.ru/).
 
 Авторы:
 * [Вадим Галкин](https://github.com/vadimiztveri/)
