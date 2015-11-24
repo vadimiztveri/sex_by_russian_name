@@ -98,9 +98,8 @@ sex_by_russian_name является бесплатным ПО, подробно
 Авторы
 ------
 
-Скрипт поддерживается [Цифрономикой](http://cifronomika.ru/).
+Автор: [Вадим Галкин](https://github.com/vadimiztveri/)
 
-Авторы:
-* [Вадим Галкин](https://github.com/vadimiztveri/)
+Благодарность:
 * [Александр Борисов](https://github.com/aishek)
 * [Кирилл Храпков](https://github.com/cubbiu)
